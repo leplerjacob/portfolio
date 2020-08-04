@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* font-family: 'PT Serif', serif; */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    object-fit: contain;
+    max-width: 40vw
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    max-width: 100%;
+}
