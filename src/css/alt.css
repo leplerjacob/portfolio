@@ -1,0 +1,34 @@
+@media only screen and (max-width: 1024px) {
+    .right-image {
+      display: none;
+    }
+    
+    img {
+        object-fit: contain;
+        min-width: 100%;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .nav-container {
+        overflow: scroll;
+        height: 100vh;
+    }
+
+  }
+  
+  @media only screen and (min-width: 1025px) {
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      max-width: 100%;
+    }
+  }

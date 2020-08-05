@@ -1,16 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap");
 
-@media only screen and (max-width: 1024px) {
-  .right-image {
-    display: none;
-  }
-  .grid-container {
-      grid-template-columns: auto 100px
-  }
-  .img {
-      max-width: 75vw;
-  }
-}
 
 /* font-family: 'PT Serif', serif; */
 
@@ -33,15 +22,42 @@ img {
   max-width: 35vw;
 }
 
+html {
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  max-width: 100%;
+  grid-template-columns: auto 280px;
 }
 
 .nav-container {
-  width: 200p;
   padding: 4px;
-  border-radius: 5px;
   border-color: #999999;
+  background-color: #4f5965;
+  padding-right: 10px;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+/* Scrollbar */
+.nav-container.scroll-off::-webkit-scrollbar {
+  display: none;
+}
+
+/* UNRESOLVED */
+/* Attempted to display scrollbar only upon wheel event: resulting scrollbar shifted the texted */
+.nav-container::-webkit-scrollbar {
+  /* width: 10px; */
+  display: none;
+}
+
+.nav-container::-webkit-scrollbar-thumb {
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+.nav-container::-webkit-scrollbar-corner {
+  display: none;
 }
