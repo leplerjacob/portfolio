@@ -1,5 +1,5 @@
 
-// Scrollbar
+// @Desc    Applies a class to nav pane container. This class temporarily makes scrollbar visible after mouse wheel event occurs
 document.querySelector(".nav-container").addEventListener("wheel", () => {
 
   const scroll = document.querySelector(".nav-container");
@@ -7,14 +7,15 @@ document.querySelector(".nav-container").addEventListener("wheel", () => {
   scroll.className = "nav-container";
 
   setTimeout(() => {
-    scroll.className += " scroll-off";
+      if(!scroll.classList.contains('scroll-off')){
+          scroll.className += " scroll-off";
+      }
   }, 500);
-
 
 });
 
 
-
+// @Desc    Upon window load, based on the size and present images, will the container of the floating box effect be given its position on the webpage
 window.addEventListener("DOMContentLoaded", () => {
 
     const navWidth = document.querySelector(".nav-content").offsetWidth;
@@ -23,18 +24,22 @@ window.addEventListener("DOMContentLoaded", () => {
     
     boxArea.style.width = navWidth + "px";
 
-    const rightImg = document.querySelector(".right-image")
+    // Grab Image
+    // const rightImg = document.querySelector(".right-image")
 
-    if(rightImg.style.display == 'none') {
+    const rightImg = window.getComputedStyle(document.querySelector('.right-image'))
+
+    if(rightImg.display == 'none') {
         const boxArea = document.querySelector('.box-area');
 
-        boxArea.style.left = 'calc(100vw - 35vw)';
+        boxArea.style.right = '0';
 
-        console.log(boxArea.style.left + 'hi')
     }
 })
 
-// Retrieves size of middle section dynamically
+
+
+// @Desc    Retrieves size of middle section dynamically and applies the same size to the floating box container overlay
 window.addEventListener("resize", () => {
   const navWidth = document.querySelector(".nav-content").offsetWidth;
 

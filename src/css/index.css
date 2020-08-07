@@ -46,7 +46,7 @@ html {
   scroll-snap-type: y mandatory;
   scroll-behavior: auto;
   scroll-snap-stop: always;
-
+  position: relative;
 }
 
 .nav-content {
@@ -61,6 +61,10 @@ html {
   font-size: 2rem;
 }
 
+.nav-content .box h4 {
+  font-size: 1.2rem
+}
+
 .nav-content .box p {
 
 }
@@ -73,10 +77,22 @@ html {
 
 #box-1 {
   background: linear-gradient(to bottom, #C7CDE3 60%,#4e5d94);
+  text-align: center;
+  padding-top: 50%;
 }
 #box-2 {
   background: linear-gradient(to bottom, #4e5d94 60%,#945A4E);
+  padding: 30% 10px 0;
 }
+#box-2 h2 {
+  text-align: center;
+  /* border-bottom: 1px solid #999999; */
+}
+#box-2 p {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
 #box-3 {
   background: linear-gradient(to bottom, #945A4E 60%,#94844E);
 }
@@ -120,11 +136,11 @@ html {
   position: absolute;
   display: block;
   list-style: none;
-  width: 25px;
-  height: 25px;
+  width: 45px;
+  height: 45px;
   background: rgba(255, 255, 255, 0.2);
   animation: animate 20s linear infinite;
-  bottom: -100px
+  bottom: -200px
 }
 
 .box-area li:nth-child(1) {
@@ -135,9 +151,9 @@ html {
 }
 
 .box-area li:nth-child(2) {
-  left: 12%;
-  width: 30px;
-  height: 30px;
+  left: 22%;
+  width: 60px;
+  height: 60px;
   animation-delay: 1.5s;
   animation-duration: 10s;
 }
