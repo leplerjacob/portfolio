@@ -22,7 +22,7 @@
   @media only screen and (min-width: 1025px) {
 
     img {
-        height: 100%;
+        height: 100vh;
         object-fit: cover;
     }
 
@@ -30,5 +30,10 @@
       display: grid;
       grid-template-columns: auto auto auto;
       max-width: 100%;
+    }
+
+    .nav-container {
+        overflow: scroll;
+        height: 100vh;
     }
   }

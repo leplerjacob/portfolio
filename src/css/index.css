@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
+/* #C7CDE3,#4E5D94,#945A4E,#79944E */
 
-/* font-family: 'PT Serif', serif; */
+:root {
+  --variable:100px;
+}
+
+/* font-family: 'Dosis', sans-serif; */
 
 * {
   box-sizing: border-box;
@@ -33,12 +38,50 @@ html {
 }
 
 .nav-container {
-  padding: 4px;
+  font-family: "Quicksand", sans-serif;
   border-color: #999999;
-  background-color: #4f5965;
-  padding-right: 10px;
+  background-color: #c7cde3;
   overflow-y: scroll;
   overflow: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: auto;
+  scroll-snap-stop: always;
+
+}
+
+.nav-content {
+  display: grid;
+}
+
+.nav-content .box h1 {
+  font-size: 4rem;
+}
+
+.nav-content .box h2 {
+  font-size: 2rem;
+}
+
+.nav-content .box p {
+
+}
+
+.box {
+  height: 100vh;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+#box-1 {
+  background: linear-gradient(to bottom, #C7CDE3 60%,#4e5d94);
+}
+#box-2 {
+  background: linear-gradient(to bottom, #4e5d94 60%,#945A4E);
+}
+#box-3 {
+  background: linear-gradient(to bottom, #945A4E 60%,#94844E);
+}
+#box-4 {
+  background: linear-gradient(to bottom, #94844E 80%);
 }
 
 /* Scrollbar */
@@ -60,4 +103,68 @@ html {
 
 .nav-container::-webkit-scrollbar-corner {
   display: none;
+}
+
+
+
+/* Animation */
+.box-area {
+  position: absolute;
+  top: 0;
+  /* left: calc(100vw - 65vw); */
+  height: 100%;
+  overflow: hidden;
+}
+
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 20s linear infinite;
+  bottom: -100px
+}
+
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4) {
+  left: 70%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(360deg);
+    opacity: 1;
+  }
+
 }
