@@ -1,36 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+@import url('./baseStyle.css');
 
-/* #C7CDE3,#4E5D94,#945A4E,#79944E */
-
-:root {
-  --variable:100px;
-}
-
-/* font-family: 'Dosis', sans-serif; */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  object-fit: contain;
-  max-width: 35vw;
-}
-
-html {
-  overflow-y: scroll;
-  overflow: hidden;
-}
 
 .grid-container {
   display: grid;
@@ -38,9 +8,10 @@ html {
 }
 
 .nav-container {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--font-primary);
   border-color: #999999;
-  background-color: #c7cde3;
+  border-width: 10px;
+  background-color: var(--bg-white);
   overflow-y: scroll;
   overflow: hidden;
   scroll-snap-type: y mandatory;
@@ -183,4 +154,64 @@ html {
     opacity: 1;
   }
 
+}
+
+
+
+
+
+/* Tech Skills */
+#box-3 .tech-skills ul {
+  height: 50vh;
+}
+#box-3 .tech-skills ul li {
+  text-align: center;
+  padding-top: 20px;
+}
+#box-3 .tech-skills ul li:first-child h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+#box-3 .tech-skills ul .span {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  row-gap: 20px;
+}
+#box-3 .tech-skills ul .span > li {
+border: 2px solid rgba(255,255,255,0.3);
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#box-3 .tech-skills ul .span > li:nth-child(even) {
+  border-left: none;
+}
+
+/* Soft Skills */
+#box-3 .soft-skills ul {
+  height: 50vh;
+}
+#box-3 .soft-skills ul li {
+  text-align: center;
+  padding-top: 20px;
+}
+#box-3 .soft-skills ul li:first-child h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+#box-3 .soft-skills ul .span {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  row-gap: 20px;
+}
+#box-3 .soft-skills ul .span > li {
+border: 2px solid rgba(255,255,255,0.3);
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#box-3 .soft-skills ul .span > li:nth-child(even) {
+  border-left: none;
 }

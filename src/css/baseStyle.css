@@ -1,0 +1,39 @@
+:root {
+    --bg-white: #C7CDE3;
+    --bg-blue: #4e5d94;
+    --bg-coral: #945A4E;
+    --bg-sand: #94844E;
+    --dark-color: #000000;
+
+    --font-primary: "Quicksand", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: var(--dark-color);
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    object-fit: contain;
+    max-width: 35vw;
+  }
+  
+  html {
+    overflow-y: scroll;
+    overflow: hidden;
+  }
+
+  .x-large {
+      font-size: 4rem;
+      line-height: 1.2;
+  }
