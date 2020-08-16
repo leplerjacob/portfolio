@@ -2,6 +2,8 @@
 @import url('./baseStyle.css');
 
 
+
+
 .grid-container {
   display: grid;
   grid-template-columns: auto 280px;
@@ -40,6 +42,35 @@
 
 }
 
+.flex-buttons {
+  position: absolute;
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.resume {
+  margin: 0 20px 0 auto;
+  border: 3px solid rgba(255,255,255,0.3);
+  padding: 10px;
+}
+
+.resume:hover {
+  border: 3px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.github {
+  margin: 0 auto 0 20px;
+  border: 3px solid rgba(255,255,255,0.3);
+  padding: 10px;
+}
+
+.github:hover {
+  border: 3px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
 .box {
   height: 100vh;
   overflow: hidden;
@@ -53,15 +84,17 @@
 }
 #box-2 {
   background: linear-gradient(to bottom, #4e5d94 60%,#945A4E);
-  padding: 30% 10px 0;
+  padding: 20px 10px 0;
+  display: grid;
+  grid-template-rows: auto;
 }
 #box-2 h2 {
   text-align: center;
+  font-size: 2rem;
   /* border-bottom: 1px solid #999999; */
 }
 #box-2 p {
-  font-size: 1.2rem;
-  margin-top: 30px;
+  font-size: 1rem;
 }
 
 #box-3 {
@@ -150,7 +183,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateY(-1000px) rotate(360deg);
+    transform: translateY(-1500px) rotate(360deg);
     opacity: 1;
   }
 
@@ -161,57 +194,79 @@
 
 
 /* Tech Skills */
-#box-3 .tech-skills ul {
-  height: 50vh;
+#box-2 .tech-skills ul {
+  height: auto;
 }
-#box-3 .tech-skills ul li {
+#box-2 .tech-skills ul li {
   text-align: center;
   padding-top: 20px;
 }
-#box-3 .tech-skills ul li:first-child h2 {
-  font-size: 3rem;
+#box-2 .tech-skills ul li:first-child h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
-#box-3 .tech-skills ul .span {
+#box-2 .tech-skills ul .span {
   display: grid;
   grid-template-columns: 50% 50%;
   row-gap: 20px;
 }
-#box-3 .tech-skills ul .span > li {
+#box-2 .tech-skills ul .span > li {
 border: 2px solid rgba(255,255,255,0.3);
-padding: 10px;
+padding: 5px;
 display: flex;
 justify-content: center;
 align-items: center;
 }
-#box-3 .tech-skills ul .span > li:nth-child(even) {
+#box-2 .tech-skills ul .span > li:nth-child(even) {
   border-left: none;
 }
 
 /* Soft Skills */
-#box-3 .soft-skills ul {
-  height: 50vh;
+#box-2 .soft-skills ul {
+  height: auto;
 }
-#box-3 .soft-skills ul li {
+#box-2 .soft-skills ul li {
   text-align: center;
   padding-top: 20px;
 }
-#box-3 .soft-skills ul li:first-child h2 {
-  font-size: 3rem;
+#box-2 .soft-skills ul li:first-child h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
-#box-3 .soft-skills ul .span {
+#box-2 .soft-skills ul .span {
   display: grid;
   grid-template-columns: 50% 50%;
   row-gap: 20px;
 }
-#box-3 .soft-skills ul .span > li {
+#box-2 .soft-skills ul .span > li {
 border: 2px solid rgba(255,255,255,0.3);
-padding: 10px;
+padding: 5px;
 display: flex;
 justify-content: center;
 align-items: center;
 }
-#box-3 .soft-skills ul .span > li:nth-child(even) {
+#box-2 .soft-skills ul .span > li:nth-child(even) {
   border-left: none;
 }
+
+
+/* Projects Grid */
+.project-container {
+  height: 100%;
+}
+
+
+
+.project-grid img {
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  height: 100%;
+}
+

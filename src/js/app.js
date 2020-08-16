@@ -57,3 +57,4 @@ window.addEventListener("resize", () => {
   console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--variable'));
 
 });
+
