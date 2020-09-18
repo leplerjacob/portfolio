@@ -43,18 +43,16 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
   const navWidth = document.querySelector(".nav-content").offsetWidth;
 
-  console.log(navWidth);
-
   const boxArea = document.querySelector(".box-area");
 
   boxArea.style.width = navWidth + "px";
 
-  console.log(boxArea.style.width);
 
   // Grab css variable
   document.documentElement.style.setProperty('--variable', '200px');
 
-  console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--variable'));
+
 
 });
+
 

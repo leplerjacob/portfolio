@@ -2,8 +2,6 @@
 @import url('./baseStyle.css');
 
 
-
-
 .grid-container {
   display: grid;
   grid-template-columns: auto 280px;
@@ -14,12 +12,15 @@
   border-color: #999999;
   border-width: 10px;
   background-color: var(--bg-white);
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow: hidden;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: auto;
-  scroll-snap-stop: always;
   position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.nav-container::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-content {
@@ -38,9 +39,16 @@
   font-size: 1.2rem
 }
 
-.nav-content .box p {
-
+.scroll-down {
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
+
+.scroll-down:hover {
+  font-size: 20px;
+}
+
 
 .flex-buttons {
   position: absolute;
@@ -56,6 +64,19 @@
 }
 
 .resume:hover {
+  border: 3px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.email {
+  position: absolute;
+  margin: 80px auto 0 -40px;
+  border: 3px solid rgba(255,255,255,0.3);
+  padding: 10px;
+  left: 50%;
+}
+
+.email:hover {
   border: 3px solid rgba(255,255,255,0.5);
   cursor: pointer;
 }
@@ -77,16 +98,22 @@
   scroll-snap-align: start;
 }
 
+.box-area p {
+  font-weight: 400;
+}
+
 #box-1 {
   background: linear-gradient(to bottom, #C7CDE3 60%,#4e5d94);
   text-align: center;
   padding-top: 50%;
+  scroll-snap-stop: always;
 }
 #box-2 {
   background: linear-gradient(to bottom, #4e5d94 60%,#945A4E);
   padding: 20px 10px 0;
   display: grid;
   grid-template-rows: auto;
+  scroll-snap-stop: always;
 }
 #box-2 h2 {
   text-align: center;
@@ -102,6 +129,11 @@
 }
 #box-4 {
   background: linear-gradient(to bottom, #94844E 80%);
+}
+
+#box-4 h2 {
+  text-align: center;
+  padding: 15px;
 }
 
 /* Scrollbar */
@@ -142,7 +174,8 @@
   list-style: none;
   width: 45px;
   height: 45px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.105);
+  color: rgba(0, 0, 0, 0.305);
   animation: animate 20s linear infinite;
   bottom: -200px
 }
@@ -268,5 +301,9 @@ align-items: center;
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   height: 100%;
+}
+
+.project-grid p {
+  text-align: center;
 }
 
